@@ -57,10 +57,12 @@ public class Main_login extends AppCompatActivity {
     }
 
     private void restablecerContrasena() {
-        // Lógica para restablecer contraseña
-        Toast.makeText(this, "Funcionalidad de restablecer contraseña", Toast.LENGTH_SHORT).show();
+        // Redirigir a RestablecerContrasenaActivity en lugar de mostrar un mensaje
+        Intent intent = new Intent(Main_login.this, RestablecerContrasenaActivity.class);
+        startActivity(intent);
     }
 }
+
 
 
 
