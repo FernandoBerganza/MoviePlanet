@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Barra de búsqueda en la parte superior -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:queryHint="Buscar películas"
+        android:iconifiedByDefault="false" />
+
+    <!-- GridLayout para mostrar el catálogo de películas -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/searchView"
+        android:layout_above="@+id/settingsButton"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:padding="8dp"
+        android:layout_gravity="center">
+
+        <!-- ImageViews de las películas -->
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/imagen1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/imagen2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/imagen3" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/imagen4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/imagen5" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/imagen6" />
+
+        <!-- Botones para las imágenes -->
+        <Button
+            android:id="@+id/buttonMovie1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/buttonMovie2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/buttonMovie3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/buttonMovie4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/buttonMovie5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/buttonMovie6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent" />
+    </GridLayout>
+
+    <!-- Botón de configuraciones en la parte inferior izquierda -->
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:text="Configuraciones" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+

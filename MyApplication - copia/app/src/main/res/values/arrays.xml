@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Definir el array de opciones para el tipo de boleto -->
+    <string-array name="ticket_type">
+        <item>Adulto</item>
+        <item>Niño</item>
+        <item>Estudiante</item>
+        <item>Senior</item>
+    </string-array>
+</resources>

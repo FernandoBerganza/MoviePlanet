@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="movie_image">Imagen de la película</string> <!-- Agrega esta línea -->
+    <string name="ticket_type_prompt">Seleccione el tipo de boleto</string> <!-- Para el Spinner -->
+    <string name="quantity_label">Cantidad de Boletos:</string> <!-- Para la etiqueta de cantidad -->
+    <string name="select_date">Seleccionar Fecha</string> <!-- Para el botón de selección de fecha -->
+    <string name="select_time">Seleccionar Hora</string> <!-- Para el botón de selección de hora -->
+    <string name="proceed_payment">Proceder al Pago</string> <!-- Para el botón de proceder al pago -->
+</resources>
+
