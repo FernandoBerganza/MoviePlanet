@@ -1,2 +1,2 @@
-# MoviePlanet
+# MoviesPlanet
 Proyecto final de Programacion
