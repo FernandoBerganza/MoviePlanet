@@ -18,7 +18,7 @@ public class Mainpago extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pago);
+        setContentView(R.layout.activity_pago); // Asegúrate de que el nombre del archivo XML sea correcto
 
         // Inicializar vistas
         etNumeroTarjeta = findViewById(R.id.et_numero_tarjeta);
@@ -43,6 +43,8 @@ public class Mainpago extends AppCompatActivity {
         String fechaVencimiento = etFechaVencimiento.getText().toString().trim();
         String cvv = etCVV.getText().toString().trim();
         String nombreTitular = etNombreTitular.getText().toString().trim();
+
+        // Obtener tipo de tarjeta seleccionado
         RadioButton rbSeleccionado = findViewById(rgTipoTarjeta.getCheckedRadioButtonId());
         String tipoTarjeta = rbSeleccionado.getText().toString();
 

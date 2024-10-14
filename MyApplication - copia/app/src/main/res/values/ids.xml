@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="et_numero_tarjeta" type="id">et_numero_tarjeta</item>
+    <item name="et_fecha_vencimiento" type="id">et_fecha_vencimiento</item>
+    <item name="et_cvv" type="id">et_cvv</item>
+    <item name="et_nombre_titular" type="id">et_nombre_titular</item>
+    <item name="rg_tipo_tarjeta" type="id">rg_tipo_tarjeta</item>
+    <item name="btn_realizar_pago" type="id">btn_realizar_pago</item>
+</resources>

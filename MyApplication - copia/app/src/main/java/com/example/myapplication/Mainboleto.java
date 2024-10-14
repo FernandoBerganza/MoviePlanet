@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent; // Asegúrate de importar Intent
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -125,8 +126,9 @@ public class Mainboleto extends AppCompatActivity {
             return;
         }
 
-        // Aquí puedes implementar la lógica para procesar el pago
-        Toast.makeText(this, "Procesando compra: " + ticketQuantity + " boletos de tipo " + selectedTicketType, Toast.LENGTH_LONG).show();
-        // Ejemplo: Aquí podrías abrir una nueva actividad para la confirmación del pago
+        // Redireccionar al Mainpago
+        Intent intent = new Intent(Mainboleto.this, Mainpago.class);
+        startActivity(intent);
     }
 }
+
