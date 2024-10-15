@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Título de la pantalla -->
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pago de Boleto de Cine"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingBottom="24dp" />
+
+    <!-- Campo para el número de tarjeta -->
+    <EditText
+        android:id="@+id/editText_cardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de tarjeta"
+        android:inputType="number"
+        android:maxLength="16"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background" />
+
+    <!-- Campo para la fecha de expiración -->
+    <EditText
+        android:id="@+id/editText_expirationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de expiración (MM/AA)"
+        android:inputType="text"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background" />
+
+    <!-- Campo para el código CVV -->
+    <EditText
+        android:id="@+id/editText_cvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código CVV"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background" />
+
+    <!-- Selector de tipo de tarjeta (débito o crédito) -->
+    <RadioGroup
+        android:id="@+id/radioGroup_paymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/radioButton_debit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Débito"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioButton_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crédito" />
+    </RadioGroup>
+
+    <!-- Botón de pagar -->
+    <Button
+        android:id="@+id/button_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pagar"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+
+</LinearLayout>
+

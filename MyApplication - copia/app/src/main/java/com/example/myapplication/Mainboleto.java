@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent; // Asegúrate de importar Intent
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +18,7 @@ public class Mainboleto extends AppCompatActivity {
 
     private Spinner spinnerTicketType;
     private EditText etTicketQuantity;
-    private Button btnSelectDate, btnSelectTime, btnProceedPayment;
+    private Button btnSelectDate, btnSelectTime, btnProceedPayment, btnReserveSeat; // Añadido btnReserveSeat
     private String selectedDate, selectedTime, selectedTicketType;
 
     @Override
@@ -32,6 +32,7 @@ public class Mainboleto extends AppCompatActivity {
         btnSelectDate = findViewById(R.id.btn_select_date);
         btnSelectTime = findViewById(R.id.btn_select_time);
         btnProceedPayment = findViewById(R.id.btn_proceed_payment);
+        btnReserveSeat = findViewById(R.id.btn_reserve_seat); // Inicializa el botón para reservar asiento
 
         // Configurar Spinner para seleccionar tipo de boleto
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -53,27 +54,19 @@ public class Mainboleto extends AppCompatActivity {
         });
 
         // Manejar la selección de la fecha
-        btnSelectDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDatePicker();
-            }
-        });
+        btnSelectDate.setOnClickListener(v -> showDatePicker());
 
         // Manejar la selección de la hora
-        btnSelectTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showTimePicker();
-            }
-        });
+        btnSelectTime.setOnClickListener(v -> showTimePicker());
 
         // Manejar el clic en el botón "Proceder al Pago"
-        btnProceedPayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                proceedToPayment();
-            }
+        btnProceedPayment.setOnClickListener(v -> proceedToPayment());
+
+        // Manejar el clic en el botón "Reservar Asiento"
+        btnReserveSeat.setOnClickListener(v -> {
+            // Iniciar la actividad de reserva de asientos
+            Intent intent = new Intent(Mainboleto.this, Mainreserva.class);
+            startActivity(intent);
         });
     }
 
@@ -127,7 +120,7 @@ public class Mainboleto extends AppCompatActivity {
         }
 
         // Redireccionar al Mainpago
-        Intent intent = new Intent(Mainboleto.this, Mainpago.class);
+        Intent intent = new Intent(Mainboleto.this, Mainpaw.class);
         startActivity(intent);
     }
 }

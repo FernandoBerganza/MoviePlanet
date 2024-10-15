@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Título del cine -->
+    <TextView
+        android:id="@+id/textview_cine_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MoviesPlanet"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp"/>
+
+    <!-- Título de la película -->
+    <TextView
+        android:id="@+id/textview_pelicula_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Título de la película"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <!-- Asientos (representación simple usando botones) -->
+    <GridLayout
+        android:id="@+id/gridlayout_asientos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="8"
+        android:layout_margin="16dp"
+        android:alignmentMode="alignMargins"
+        android:padding="10dp">
+
+        <!-- Fila A -->
+        <Button android:id="@+id/button_asiento_A1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A1" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A2" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A3" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A4" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A5" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A6" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A7" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_A8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="A8" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+
+        <!-- Fila B -->
+        <Button android:id="@+id/button_asiento_B1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B1" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B2" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B3" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B4" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B5" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B6" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B7" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_B8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="B8" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+
+        <!-- Fila C -->
+        <Button android:id="@+id/button_asiento_C1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C1" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C2" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C3" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C4" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C5" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C6" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C7" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_C8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="C8" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+
+        <!-- Fila D -->
+        <Button android:id="@+id/button_asiento_D1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D1" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D2" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D3" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D4" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D5" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D6" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D7" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_D8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="D8" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+
+        <!-- Fila E -->
+        <Button android:id="@+id/button_asiento_E1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E1" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E2" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E3" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E4" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E5" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E6" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E7" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+        <Button android:id="@+id/button_asiento_E8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="E8" android:backgroundTint="#CCCCCC" android:textColor="#000000"/>
+    </GridLayout>
+
+    <!-- Botón Reservar Asientos -->
+    <Button
+        android:id="@+id/button_reservar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Reservar Asientos"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
+
+
+
+
+
+
