@@ -18,7 +18,7 @@ public class Mainpaw extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paw);
+        setContentView(R.layout.activity_paw); // Asegúrate de que este sea tu layout de pago
 
         // Inicializar los elementos de la interfaz
         editTextCardNumber = findViewById(R.id.editText_cardNumber);
@@ -46,4 +46,3 @@ public class Mainpaw extends AppCompatActivity {
         });
     }
 }
-

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Movies Planet</string>
     <string name="movie_image">Imagen de la película</string> <!-- Agrega esta línea -->
     <string name="ticket_type_prompt">Seleccione el tipo de boleto</string> <!-- Para el Spinner -->
     <string name="quantity_label">Cantidad de Boletos:</string> <!-- Para la etiqueta de cantidad -->
