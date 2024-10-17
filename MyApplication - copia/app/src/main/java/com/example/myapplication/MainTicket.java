@@ -1,79 +1,71 @@
-package com.example.myapplication;
+package com.example.myapplication; // Asegúrate de que el paquete coincida con el de tu proyecto
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 public class MainTicket extends AppCompatActivity {
 
-    private TextView textViewSeatInfo, textViewDateInfo, textViewTimeInfo, textViewQuantityInfo, textViewAmountInfo;
-    private ImageView ticketLayout; // Cambia esto según el id de tu diseño
-    private Button buttonDownloadTicket, buttonBackToCatalog;
+    private TextView ticketTitle;
+    private TextView textViewSeatInfo;
+    private TextView textViewDateInfo;
+    private TextView textViewTimeInfo;
+    private TextView textViewQuantityInfo;
+    private TextView textViewAmountInfo;
+    private ImageView imageViewQRCode;
+    private Button buttonDownloadTicket;
+    private Button buttonBackToCatalog;
 
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_ticket);
 
-        // Inicialización de elementos
+        // Inicializa los elementos de la interfaz
+        ticketTitle = findViewById(R.id.ticketTitle);
         textViewSeatInfo = findViewById(R.id.textViewSeatInfo);
         textViewDateInfo = findViewById(R.id.textViewDateInfo);
         textViewTimeInfo = findViewById(R.id.textViewTimeInfo);
         textViewQuantityInfo = findViewById(R.id.textViewQuantityInfo);
         textViewAmountInfo = findViewById(R.id.textViewAmountInfo);
-        ticketLayout = findViewById(R.id.ticketLayout); // Layout del ticket
+        imageViewQRCode = findViewById(R.id.imageViewQRCode);
         buttonDownloadTicket = findViewById(R.id.buttonDownloadTicket);
         buttonBackToCatalog = findViewById(R.id.buttonBackToCatalog);
 
-        // Obtener datos de la intención
-        Intent intent = getIntent();
-        String seatInfo = intent.getStringExtra("seatInfo");
-        String dateInfo = intent.getStringExtra("dateInfo");
-        String timeInfo = intent.getStringExtra("timeInfo");
-        String quantityInfo = intent.getStringExtra("quantityInfo");
-        String amountInfo = intent.getStringExtra("amountInfo");
+        // Establece información del boleto (puedes recibir estos datos de otro Activity)
+        setTicketInfo("Asiento: A1", "Fecha: 20/10/2024", "Hora: 18:00", "Cantidad: 2", "Monto: $120");
 
-        // Mostrar datos en el boleto
-        textViewSeatInfo.setText("Asiento: " + seatInfo);
-        textViewDateInfo.setText("Fecha: " + dateInfo);
-        textViewTimeInfo.setText("Hora: " + timeInfo);
-        textViewQuantityInfo.setText("Cantidad: " + quantityInfo);
-        textViewAmountInfo.setText("Monto: " + amountInfo);
+        // Configura el botón de descarga de boleto
+        buttonDownloadTicket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí puedes implementar la lógica para descargar el boleto
+            }
+        });
 
-        // Configurar botón de descargar
-        buttonDownloadTicket.setOnClickListener(v -> downloadTicketAsImage());
-
-        // Configurar botón de volver al catálogo
-        buttonBackToCatalog.setOnClickListener(v -> {
-            Intent catalogIntent = new Intent(MainTicket.this, MainActivity.class);
-            startActivity(catalogIntent);
+        // Configura el botón de regreso al catálogo
+        buttonBackToCatalog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainTicket.this, MainActivity.class); // Cambia MainCatalog por el nombre de tu actividad de catálogo
+                startActivity(intent);
+                finish(); // Finaliza la actividad actual si no la necesitas en el back stack
+            }
         });
     }
 
-    private void downloadTicketAsImage() {
-        BitmapDrawable drawable = (BitmapDrawable) ticketLayout.getBackground();
-        Bitmap bitmap = drawable.getBitmap();
-        String filePath = getExternalFilesDir(null) + "/ticket.png"; // Cambia esto si necesitas otra ubicación
-
-        try (FileOutputStream out = new FileOutputStream(filePath)) {
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // PNG es el formato del boleto
-            // Mostrar un mensaje de éxito
-            Toast.makeText(this, "Boleto descargado exitosamente en: " + filePath, Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Error al descargar el boleto.", Toast.LENGTH_SHORT).show();
-        }
+    // Método para establecer información del boleto
+    private void setTicketInfo(String seat, String date, String time, String quantity, String amount) {
+        textViewSeatInfo.setText(seat);
+        textViewDateInfo.setText(date);
+        textViewTimeInfo.setText(time);
+        textViewQuantityInfo.setText(quantity);
+        textViewAmountInfo.setText(amount);
     }
 }
+

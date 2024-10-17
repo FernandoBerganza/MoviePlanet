@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-        <activity
-            android:name=".MainTicket"
-            android:exported="false" />
         <!-- Cambiar MainActivity a Main_login como actividad principal -->
         <activity
             android:name=".Main_login"
@@ -49,6 +46,10 @@
         <activity
             android:name=".MainGestor"
             android:exported="true"></activity>
-    </application>
+        
+        <activity
+            android:name=".MainTicket"
+             android:exported="true"></activity>
+</application>
 
 </manifest>
