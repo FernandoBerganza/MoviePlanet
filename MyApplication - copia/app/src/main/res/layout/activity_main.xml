@@ -3,22 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Barra de búsqueda en la parte superior -->
-    <SearchView
-        android:id="@+id/searchView"
+    <!-- Texto "MOVIES PLANET" en lugar de la barra de búsqueda -->
+    <TextView
+        android:id="@+id/moviesPlanetTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:queryHint="Buscar películas"
-        android:iconifiedByDefault="false" />
+        android:text="MOVIES PLANET"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold" />
 
     <!-- GridLayout para mostrar el catálogo de películas -->
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@id/searchView"
+        android:layout_below="@id/moviesPlanetTitle"
         android:layout_above="@+id/settingsButton"
         android:layout_weight="1"
         android:columnCount="3"
@@ -171,14 +173,6 @@
         android:layout_margin="16dp"
         android:text="Configuraciones" />
 </RelativeLayout>
-
-
-
-
-
-
-
-
 
 
 

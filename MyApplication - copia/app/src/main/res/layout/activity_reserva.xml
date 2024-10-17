@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#BBDEFB">
+    android:background="#FFFFFF">
 
     <!-- Título del cine -->
     <TextView
@@ -24,7 +24,7 @@
         android:id="@+id/textview_pelicula_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Título de la película"
+        android:text="¡Seleccione el asiento deseado!"
         android:textSize="18sp"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="16dp"/>
@@ -102,6 +102,7 @@
         android:textColor="#FFFFFF"
         android:layout_marginTop="16dp"/>
 </LinearLayout>
+
 
 
 

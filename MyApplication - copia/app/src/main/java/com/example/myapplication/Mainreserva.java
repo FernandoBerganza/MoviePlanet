@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -63,13 +64,13 @@ public class Mainreserva extends AppCompatActivity {
                 } else {
                     String mensaje = "Asientos seleccionados: " + asientosSeleccionados.toString();
                     Toast.makeText(Mainreserva.this, mensaje, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Mainreserva.this, Mainpaw.class);
+                    startActivity(intent);
                 }
             }
         });
     }
 }
-
-
 
 
 

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +43,10 @@ public class Mainpaw extends AppCompatActivity {
             } else {
                 // Lógica para procesar el pago
                 Toast.makeText(Mainpaw.this, "Pago realizado con " + paymentMethod, Toast.LENGTH_SHORT).show();
+
+                // Redirigir a la actividad del ticket
+                Intent intent = new Intent(Mainpaw.this, MainTicket.class); // Asegúrate de que TicketActivity sea el nombre de la actividad del ticket
+                startActivity(intent);
             }
         });
     }

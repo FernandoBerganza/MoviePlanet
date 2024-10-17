@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingrese su usuario"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -64,6 +64,7 @@
             android:id="@+id/campoContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="Ingrese su contraseña"
             android:inputType="textPassword"
             android:textColor="@color/white"

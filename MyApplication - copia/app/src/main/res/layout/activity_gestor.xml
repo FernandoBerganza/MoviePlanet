@@ -75,7 +75,7 @@
             android:id="@+id/etCantidadBoletos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de boletos"
+            android:hint="Fecha de reservas"
             android:inputType="number"
             android:textColor="@color/black"
             android:textColorHint="@color/black" />

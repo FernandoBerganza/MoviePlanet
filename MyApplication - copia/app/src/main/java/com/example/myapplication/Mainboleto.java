@@ -1,15 +1,16 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
@@ -18,9 +19,12 @@ public class Mainboleto extends AppCompatActivity {
 
     private Spinner spinnerTicketType;
     private EditText etTicketQuantity;
-    private Button btnSelectDate, btnSelectTime, btnProceedPayment, btnReserveSeat; // Añadido btnReserveSeat
+    private Button btnSelectDate, btnSelectTime, btnProceedPayment;
+    private TextView tvTotalPrice;
     private String selectedDate, selectedTime, selectedTicketType;
+    private static final int TICKET_PRICE = 25;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,25 +36,20 @@ public class Mainboleto extends AppCompatActivity {
         btnSelectDate = findViewById(R.id.btn_select_date);
         btnSelectTime = findViewById(R.id.btn_select_time);
         btnProceedPayment = findViewById(R.id.btn_proceed_payment);
-        btnReserveSeat = findViewById(R.id.btn_reserve_seat); // Inicializa el botón para reservar asiento
+        tvTotalPrice = findViewById(R.id.tv_total_price);
 
-        // Configurar Spinner para seleccionar tipo de boleto
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.ticket_type, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerTicketType.setAdapter(adapter);
-
-        // Manejar la selección del tipo de boleto
-        spinnerTicketType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        // Escuchar cambios en la cantidad de boletos para actualizar el precio total
+        etTicketQuantity.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selectedTicketType = parent.getItemAtPosition(position).toString();
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                calcularPrecioTotal();
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Por defecto, no hacer nada
-            }
+            public void afterTextChanged(Editable s) {}
         });
 
         // Manejar la selección de la fecha
@@ -61,13 +60,17 @@ public class Mainboleto extends AppCompatActivity {
 
         // Manejar el clic en el botón "Proceder al Pago"
         btnProceedPayment.setOnClickListener(v -> proceedToPayment());
+    }
 
-        // Manejar el clic en el botón "Reservar Asiento"
-        btnReserveSeat.setOnClickListener(v -> {
-            // Iniciar la actividad de reserva de asientos
-            Intent intent = new Intent(Mainboleto.this, Mainreserva.class);
-            startActivity(intent);
-        });
+    private void calcularPrecioTotal() {
+        String quantityText = etTicketQuantity.getText().toString();
+        if (!quantityText.isEmpty()) {
+            int ticketQuantity = Integer.parseInt(quantityText);
+            int totalPrice = ticketQuantity * TICKET_PRICE;
+            tvTotalPrice.setText("Q" + totalPrice + ".00");
+        } else {
+            tvTotalPrice.setText("Q0.00");
+        }
     }
 
     // Método para mostrar el selector de fecha
@@ -106,6 +109,8 @@ public class Mainboleto extends AppCompatActivity {
     // Método para proceder al pago
     private void proceedToPayment() {
         String quantityText = etTicketQuantity.getText().toString();
+
+        // Validar que la cantidad de boletos no esté vacía
         if (quantityText.isEmpty()) {
             Toast.makeText(this, "Por favor, ingrese la cantidad de boletos.", Toast.LENGTH_SHORT).show();
             return;
@@ -113,15 +118,19 @@ public class Mainboleto extends AppCompatActivity {
 
         int ticketQuantity = Integer.parseInt(quantityText);
 
-        // Validar que todos los campos estén llenos
-        if (selectedDate == null || selectedTime == null || selectedTicketType == null) {
-            Toast.makeText(this, "Por favor, complete toda la información antes de proceder.", Toast.LENGTH_SHORT).show();
+        // Validar que todos los campos estén llenos antes de proceder
+        if (selectedDate == null) {
+            Toast.makeText(this, "Por favor, seleccione una fecha.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Redireccionar al Mainpago
-        Intent intent = new Intent(Mainboleto.this, Mainpaw.class);
+        if (selectedTime == null) {
+            Toast.makeText(this, "Por favor, seleccione una hora.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Redireccionar al Mainpago (Mainpaw) solo si todos los datos están completos
+        Intent intent = new Intent(Mainboleto.this, Mainreserva.class);
         startActivity(intent);
     }
 }
-
