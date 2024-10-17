@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".BaseDatos"
+            android:exported="false" />
         <!-- Cambiar MainActivity a Main_login como actividad principal -->
         <activity
             android:name=".Main_login"
@@ -24,32 +28,31 @@
         </activity> <!-- Mantener MainActivity como secundaria -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity> <!-- Agregar la declaración para la actividad de descripción de películas -->
+            android:exported="true" /> <!-- Agregar la declaración para la actividad de descripción de películas -->
         <activity
             android:name=".MovieDescriptionActivity"
-            android:exported="true"></activity> <!-- Agregar la declaración para la actividad de configuraciones -->
+            android:exported="true" /> <!-- Agregar la declaración para la actividad de configuraciones -->
         <activity
             android:name=".Main_configures"
-            android:exported="true"></activity> <!-- Agregar la declaración para la actividad de compra de boletos -->
+            android:exported="true" /> <!-- Agregar la declaración para la actividad de compra de boletos -->
         <activity
             android:name=".Mainboleto"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RestablecerContrasenaActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Mainpaw"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Mainreserva"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainGestor"
-            android:exported="true"></activity>
-        
+            android:exported="true" />
         <activity
             android:name=".MainTicket"
-             android:exported="true"></activity>
-</application>
+            android:exported="true" />
+    </application>
 
 </manifest>
