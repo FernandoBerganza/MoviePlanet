@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ticketTitle"
         android:layout_marginTop="16dp"
-        android:text="Asiento: A1"
+        android:text="Asiento: D1, E2"
         android:textSize="18sp" />
 
     <TextView
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewQuantityInfo"
         android:layout_marginTop="8dp"
-        android:text="Monto: $120"
+        android:text="Monto: Q 50.00"
         android:textSize="18sp" />
 
     <!-- Código QR -->
