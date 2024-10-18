@@ -16,6 +16,7 @@ public class Main_login extends AppCompatActivity {
     private EditText campoContrasena;
     private Button btnIniciarSesion;
     private TextView txtRestablecerContrasena;
+    private TextView txtCrearUsuario;  // Nuevo texto de "Crear Usuario"
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Main_login extends AppCompatActivity {
         campoContrasena = findViewById(R.id.campoContrasena);
         btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
         txtRestablecerContrasena = findViewById(R.id.txtRestablecerContrasena);
+        txtCrearUsuario = findViewById(R.id.txtCrearUsuario);  // Nuevo ID para el texto "Crear Usuario"
 
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,15 @@ public class Main_login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 restablecerContrasena();
+            }
+        });
+
+        txtCrearUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de creación de usuario
+                Intent intent = new Intent(Main_login.this, Main_correo.class);
+                startActivity(intent);
             }
         });
     }

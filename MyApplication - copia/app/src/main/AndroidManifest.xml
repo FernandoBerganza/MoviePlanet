@@ -53,6 +53,9 @@
         <activity
             android:name=".MainTicket"
             android:exported="true" />
+        <activity
+            android:name=".Main_correo"
+            android:exported="true" />
     </application>
 
 </manifest>
