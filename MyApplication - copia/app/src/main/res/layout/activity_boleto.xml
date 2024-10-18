@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/black">
+    android:background="#000000">
 
     <!-- Título de la pantalla -->
     <TextView
@@ -16,7 +16,8 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp"/>
+        android:paddingBottom="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- Selección de tipo de boleto (Adulto, Niño) -->
     <Spinner
@@ -33,14 +34,16 @@
         android:layout_height="wrap_content"
         android:text="@string/quantity_label"
         android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <EditText
         android:id="@+id/et_ticket_quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="Número de boletos"/>
+        android:hint="Número de boletos"
+        android:textColor="@android:color/white"/>
 
     <!-- Selección de fecha -->
     <TextView
@@ -49,14 +52,16 @@
         android:layout_height="wrap_content"
         android:text="Seleccionar Fecha:"
         android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/btn_select_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_date"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"/>
 
     <!-- Selección de hora -->
     <TextView
@@ -65,14 +70,16 @@
         android:layout_height="wrap_content"
         android:text="Seleccionar Hora:"
         android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/btn_select_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_time"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"/>
 
     <!-- Botón para proceder al pago -->
     <Button
@@ -99,7 +106,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Precio total:"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
 
         <TextView
             android:id="@+id/tv_total_price"
@@ -107,7 +115,8 @@
             android:layout_height="wrap_content"
             android:text="Q0.00"
             android:textSize="18sp"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
 </LinearLayout>

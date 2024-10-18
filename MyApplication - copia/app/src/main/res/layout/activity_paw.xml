@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FFFFFFFF">
+    android:background="#000000">
 
     <!-- Título de la pantalla -->
     <TextView
@@ -17,7 +17,8 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_gravity="center"
-        android:paddingBottom="24dp" />
+        android:paddingBottom="24dp"
+        android:textColor="@android:color/white"/>
 
     <!-- Campo para el número de tarjeta -->
     <EditText
@@ -29,7 +30,8 @@
         android:maxLength="16"
         android:padding="8dp"
         android:layout_marginBottom="16dp"
-        android:background="@android:drawable/editbox_background" />
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"/>
 
     <!-- Campo para la fecha de expiración -->
     <EditText
@@ -40,7 +42,8 @@
         android:inputType="text"
         android:padding="8dp"
         android:layout_marginBottom="16dp"
-        android:background="@android:drawable/editbox_background" />
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"/>
 
     <!-- Campo para el código CVV -->
     <EditText
@@ -52,7 +55,8 @@
         android:maxLength="3"
         android:padding="8dp"
         android:layout_marginBottom="16dp"
-        android:background="@android:drawable/editbox_background" />
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"/>
 
     <!-- Selector de tipo de tarjeta (débito o crédito) -->
     <RadioGroup
@@ -68,13 +72,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Débito"
-            android:checked="true" />
+            android:checked="true"
+            android:textColor="@android:color/white"/>
 
         <RadioButton
             android:id="@+id/radioButton_credit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crédito" />
+            android:text="Crédito"
+            android:textColor="@android:color/white"/>
     </RadioGroup>
 
     <!-- Botón de pagar -->

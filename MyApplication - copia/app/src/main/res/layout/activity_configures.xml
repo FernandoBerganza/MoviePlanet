@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#BBDEFB"
+    android:background="#000000"
     android:padding="16dp">
 
     <!-- Título de la pantalla -->
@@ -17,8 +17,8 @@
         android:textStyle="bold"
         android:paddingBottom="16dp"
         android:gravity="center"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_gravity="center_horizontal"/>
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal" />
 
     <!-- ListView estilizado para las opciones de configuración -->
     <com.google.android.material.card.MaterialCardView
@@ -38,7 +38,8 @@
             android:divider="@android:color/holo_blue_dark"
             android:dividerHeight="1dp"
             android:background="@android:color/white"
-            android:padding="8dp"/>
+            android:padding="8dp"
+            android:textColor="@android:color/black"/>
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
