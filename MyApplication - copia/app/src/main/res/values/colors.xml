@@ -7,7 +7,7 @@
     <color name="colorSelectedSeat">#FF5722</color> <!-- Color de los asientos seleccionados -->
     <!-- Color gris para los asientos deseleccionados -->
     <color name="gray">#808080</color> <!-- Puedes ajustar el código hex según el tono deseado -->
-
+    <color name="negro">#000000</color>
     <!-- Color teal para los asientos seleccionados -->
     <color name="teal_700">#00796B</color> <!-- Puedes ajustar el código hex según el tono deseado -->
 </resources>
