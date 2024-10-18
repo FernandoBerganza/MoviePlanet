@@ -2,11 +2,11 @@ package com.example.myapplication;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -17,11 +17,11 @@ import java.util.Calendar;
 
 public class Mainboleto extends AppCompatActivity {
 
-    private Spinner spinnerTicketType;
+    private Spinner spinnerTicketType, spinnerTimeSelection;
     private EditText etTicketQuantity;
-    private Button btnSelectDate, btnSelectTime, btnProceedPayment;
+    private Button btnSelectDate, btnProceedPayment;
     private TextView tvTotalPrice;
-    private String selectedDate, selectedTime, selectedTicketType;
+    private String selectedDate, selectedTime;
     private static final int TICKET_PRICE = 25;
 
     @SuppressLint("MissingInflatedId")
@@ -32,11 +32,25 @@ public class Mainboleto extends AppCompatActivity {
 
         // Inicializar los componentes de la UI
         spinnerTicketType = findViewById(R.id.spinner_ticket_type);
+        spinnerTimeSelection = findViewById(R.id.spinner_time_selection);
         etTicketQuantity = findViewById(R.id.et_ticket_quantity);
         btnSelectDate = findViewById(R.id.btn_select_date);
-        btnSelectTime = findViewById(R.id.btn_select_time);
         btnProceedPayment = findViewById(R.id.btn_proceed_payment);
         tvTotalPrice = findViewById(R.id.tv_total_price);
+
+        // Configurar adaptador personalizado para el Spinner de tipo de boleto
+        ArrayAdapter<CharSequence> adapterTicketType = ArrayAdapter.createFromResource(
+                this, R.array.ticket_type_limited, R.layout.spinner_item
+        );
+        adapterTicketType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTicketType.setAdapter(adapterTicketType);
+
+        // Configurar adaptador personalizado para el Spinner de selección de hora
+        ArrayAdapter<CharSequence> adapterTimeSelection = ArrayAdapter.createFromResource(
+                this, R.array.time_options, R.layout.spinner_item
+        );
+        adapterTimeSelection.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTimeSelection.setAdapter(adapterTimeSelection);
 
         // Escuchar cambios en la cantidad de boletos para actualizar el precio total
         etTicketQuantity.addTextChangedListener(new TextWatcher() {
@@ -54,9 +68,6 @@ public class Mainboleto extends AppCompatActivity {
 
         // Manejar la selección de la fecha
         btnSelectDate.setOnClickListener(v -> showDatePicker());
-
-        // Manejar la selección de la hora
-        btnSelectTime.setOnClickListener(v -> showTimePicker());
 
         // Manejar el clic en el botón "Proceder al Pago"
         btnProceedPayment.setOnClickListener(v -> proceedToPayment());
@@ -90,22 +101,6 @@ public class Mainboleto extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    // Método para mostrar el selector de hora
-    private void showTimePicker() {
-        final Calendar calendar = Calendar.getInstance();
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute = calendar.get(Calendar.MINUTE);
-
-        TimePickerDialog timePickerDialog = new TimePickerDialog(
-                Mainboleto.this,
-                (view, hourOfDay, minute1) -> {
-                    selectedTime = hourOfDay + ":" + String.format("%02d", minute1);
-                    Toast.makeText(Mainboleto.this, "Hora seleccionada: " + selectedTime, Toast.LENGTH_SHORT).show();
-                },
-                hour, minute, true);
-        timePickerDialog.show();
-    }
-
     // Método para proceder al pago
     private void proceedToPayment() {
         String quantityText = etTicketQuantity.getText().toString();
@@ -124,13 +119,12 @@ public class Mainboleto extends AppCompatActivity {
             return;
         }
 
-        if (selectedTime == null) {
-            Toast.makeText(this, "Por favor, seleccione una hora.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Redireccionar al Mainpago (Mainpaw) solo si todos los datos están completos
+        // Redireccionar a la pantalla de reserva
         Intent intent = new Intent(Mainboleto.this, Mainreserva.class);
         startActivity(intent);
     }
 }
+
+
+
+

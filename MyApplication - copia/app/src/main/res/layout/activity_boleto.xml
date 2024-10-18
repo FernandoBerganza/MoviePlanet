@@ -19,12 +19,12 @@
         android:paddingBottom="16dp"
         android:textColor="@android:color/white"/>
 
-    <!-- Selección de tipo de boleto (Adulto, Niño) -->
+    <!-- Selección de tipo de boleto (Solo Adulto y Niño) -->
     <Spinner
         android:id="@+id/spinner_ticket_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/ticket_type"
+        android:entries="@array/ticket_type_limited"
         android:prompt="@string/ticket_type_prompt"/>
 
     <!-- Selección de cantidad de boletos -->
@@ -61,9 +61,10 @@
         android:layout_height="wrap_content"
         android:text="@string/select_date"
         android:layout_marginTop="8dp"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
-    <!-- Selección de hora -->
+    <!-- Selección de hora (Modificado para Spinner) -->
     <TextView
         android:id="@+id/tv_time_label"
         android:layout_width="wrap_content"
@@ -73,13 +74,14 @@
         android:layout_marginTop="16dp"
         android:textColor="@android:color/white"/>
 
-    <Button
-        android:id="@+id/btn_select_time"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner_time_selection"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/select_time"
-        android:layout_marginTop="8dp"
-        android:textColor="@android:color/white"/>
+        android:entries="@array/time_options"
+        android:prompt="@string/select_time_prompt"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
 
     <!-- Botón para proceder al pago -->
     <Button
@@ -120,3 +122,4 @@
     </LinearLayout>
 
 </LinearLayout>
+

@@ -14,5 +14,11 @@
     <string name="text_tarjeta_debito">Tarjeta de Débito</string>
     <string name="text_tarjeta_credito">Tarjeta de Crédito</string>
     <string name="btn_realizar_pago">Realizar Pago</string>
+
+        <!-- Otros strings que ya tienes definidos -->
+
+        <string name="select_time_prompt">Seleccione la hora</string>
+
+
 </resources>
 
