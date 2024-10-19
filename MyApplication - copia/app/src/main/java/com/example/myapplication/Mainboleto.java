@@ -22,7 +22,6 @@ public class Mainboleto extends AppCompatActivity {
     private Button btnSelectDate, btnProceedPayment;
     private TextView tvTotalPrice;
     private String selectedDate, selectedTime;
-    private static final int TICKET_PRICE = 25;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -77,7 +76,21 @@ public class Mainboleto extends AppCompatActivity {
         String quantityText = etTicketQuantity.getText().toString();
         if (!quantityText.isEmpty()) {
             int ticketQuantity = Integer.parseInt(quantityText);
-            int totalPrice = ticketQuantity * TICKET_PRICE;
+            int ticketPrice;
+
+            // Obtener el tipo de boleto seleccionado
+            String selectedTicketType = spinnerTicketType.getSelectedItem().toString();
+
+            // Asignar el precio según el tipo de boleto
+            if (selectedTicketType.equals("Adulto")) {
+                ticketPrice = 25;  // Precio para adultos
+            } else if (selectedTicketType.equals("Niño")) {
+                ticketPrice = 15;  // Precio para niños
+            } else {
+                ticketPrice = 0; // Valor predeterminado en caso de que no se seleccione
+            }
+
+            int totalPrice = ticketQuantity * ticketPrice;
             tvTotalPrice.setText("Q" + totalPrice + ".00");
         } else {
             tvTotalPrice.setText("Q0.00");
