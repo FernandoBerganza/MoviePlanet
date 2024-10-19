@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ticket_type_limited">
+        <item>Adulto</item>
+        <item>Niño</item>
+    </string-array>
+    <string-array name="time_options">
+        <item>1:00 pm</item>
+        <item>3:30 pm</item>
+        <item>5:30 pm</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="celeste_opaco">#A3CCE2</color>
+    <color name="celeste_oscuro">#007BFF</color>
+    <color name="celeste_resaltante">#00BFFF</color>
+    <color name="colorDefaultSeat">#CCCCCC</color>
+    <color name="colorSelectedSeat">#FF5722</color>
+    <color name="fondo_azul_oscuro">#1A1A40</color>
+    <color name="gray">#808080</color>
+    <color name="light_blue">#3DDC84</color>
+    <color name="menta_suave">#D1F2EB</color>
+    <color name="negro">#000000</color>
+    <color name="teal_700">#00796B</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Movies Planet</string>
+    <string name="btn_realizar_pago">Realizar Pago</string>
+    <string name="hint_cvv">CVV</string>
+    <string name="hint_fecha_vencimiento">Fecha de Vencimiento (MM/AA)</string>
+    <string name="hint_nombre_titular">Nombre del Titular</string>
+    <string name="hint_numero_tarjeta">Número de Tarjeta</string>
+    <string name="movie_image">Imagen de la película</string>
+    <string name="proceed_payment">Procesar Boleto</string>
+    <string name="quantity_label">Cantidad de Boletos:</string>
+    <string name="select_date">Seleccionar Fecha</string>
+    <string name="select_time">Seleccionar Hora</string>
+    <string name="select_time_prompt">Seleccione la hora</string>
+    <string name="text_tarjeta_credito">Tarjeta de Crédito</string>
+    <string name="text_tarjeta_debito">Tarjeta de Débito</string>
+    <string name="ticket_type_prompt">Seleccione el tipo de boleto</string>
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication"/>
+</resources>

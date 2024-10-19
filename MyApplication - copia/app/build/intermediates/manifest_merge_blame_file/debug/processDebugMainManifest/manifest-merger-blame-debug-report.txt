@@ -1,0 +1,201 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.myapplication"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:4:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.13.0] C:\Users\LUISJO\.gradle\caches\transforms-4\cb967705af52d0ba2683ca246cf9f8e4\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.13.0] C:\Users\LUISJO\.gradle\caches\transforms-4\cb967705af52d0ba2683ca246cf9f8e4\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.13.0] C:\Users\LUISJO\.gradle\caches\transforms-4\cb967705af52d0ba2683ca246cf9f8e4\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.13.0] C:\Users\LUISJO\.gradle\caches\transforms-4\cb967705af52d0ba2683ca246cf9f8e4\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.13.0] C:\Users\LUISJO\.gradle\caches\transforms-4\cb967705af52d0ba2683ca246cf9f8e4\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:6:5-59:19
+20        android:allowBackup="true"
+20-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:7:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.13.0] C:\Users\LUISJO\.gradle\caches\transforms-4\cb967705af52d0ba2683ca246cf9f8e4\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:8:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:9:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:10:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:11:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:12:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:13:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.MyApplication" >
+31-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:14:9-51
+32        <activity
+32-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:16:9-18:40
+33            android:name="com.example.myapplication.BaseDatos"
+33-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:17:13-38
+34            android:exported="false" />
+34-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:18:13-37
+35        <!-- Cambiar MainActivity a Main_login como actividad principal -->
+36        <activity
+36-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:20:9-28:20
+37            android:name="com.example.myapplication.Main_login"
+37-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:21:13-39
+38            android:exported="true" >
+38-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:22:13-36
+39            <intent-filter>
+39-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:23:13-27:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:24:17-69
+40-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:24:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:26:17-77
+42-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:26:27-74
+43            </intent-filter>
+44        </activity> <!-- Mantener MainActivity como secundaria -->
+45        <activity
+45-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:29:9-31:39
+46            android:name="com.example.myapplication.MainActivity"
+46-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:30:13-41
+47            android:exported="true" /> <!-- Agregar la declaración para la actividad de descripción de películas -->
+47-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:31:13-36
+48        <activity
+48-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:32:9-34:39
+49            android:name="com.example.myapplication.MovieDescriptionActivity"
+49-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:33:13-53
+50            android:exported="true" /> <!-- Agregar la declaración para la actividad de configuraciones -->
+50-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:34:13-36
+51        <activity
+51-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:35:9-37:39
+52            android:name="com.example.myapplication.Main_configures"
+52-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:36:13-44
+53            android:exported="true" /> <!-- Agregar la declaración para la actividad de compra de boletos -->
+53-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:37:13-36
+54        <activity
+54-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:38:9-40:39
+55            android:name="com.example.myapplication.Mainboleto"
+55-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:39:13-39
+56            android:exported="true" />
+56-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:40:13-36
+57        <activity
+57-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:41:9-43:39
+58            android:name="com.example.myapplication.RestablecerContrasenaActivity"
+58-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:42:13-58
+59            android:exported="true" />
+59-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:43:13-36
+60        <activity
+60-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:44:9-46:39
+61            android:name="com.example.myapplication.Mainpaw"
+61-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:45:13-36
+62            android:exported="true" />
+62-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:46:13-36
+63        <activity
+63-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:47:9-49:39
+64            android:name="com.example.myapplication.Mainreserva"
+64-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:48:13-40
+65            android:exported="true" />
+65-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:49:13-36
+66        <activity
+66-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:50:9-52:39
+67            android:name="com.example.myapplication.MainGestor"
+67-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:51:13-39
+68            android:exported="true" />
+68-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:52:13-36
+69        <activity
+69-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:53:9-55:39
+70            android:name="com.example.myapplication.MainTicket"
+70-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:54:13-39
+71            android:exported="true" />
+71-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:55:13-36
+72        <activity
+72-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:56:9-58:39
+73            android:name="com.example.myapplication.Main_correo"
+73-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:57:13-40
+74            android:exported="true" />
+74-->C:\Users\LUISJO\Documents\GitHub\MoviePlanet\MyApplication - copia\app\src\main\AndroidManifest.xml:58:13-36
+75
+76        <provider
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+77            android:name="androidx.startup.InitializationProvider"
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+78            android:authorities="com.example.myapplication.androidx-startup"
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+79            android:exported="false" >
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+80            <meta-data
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+82                android:value="androidx.startup" />
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LUISJO\.gradle\caches\transforms-4\85142ebd5c6d57d9345b80a58e6886af\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+83            <meta-data
+83-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LUISJO\.gradle\caches\transforms-4\204d98c3accdbd93815fc2ad3cc4fbaa\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+84-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LUISJO\.gradle\caches\transforms-4\204d98c3accdbd93815fc2ad3cc4fbaa\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+85                android:value="androidx.startup" />
+85-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LUISJO\.gradle\caches\transforms-4\204d98c3accdbd93815fc2ad3cc4fbaa\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+86            <meta-data
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+87                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+88                android:value="androidx.startup" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+89        </provider>
+90
+91        <receiver
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+92            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+93            android:directBootAware="false"
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+94            android:enabled="true"
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+95            android:exported="true"
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+96            android:permission="android.permission.DUMP" >
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+98                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+101                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+102            </intent-filter>
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+104                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+107                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LUISJO\.gradle\caches\transforms-4\1e961a9cf8dfee27c68b63aa5bb63160\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+108            </intent-filter>
+109        </receiver>
+110    </application>
+111
+112</manifest>
