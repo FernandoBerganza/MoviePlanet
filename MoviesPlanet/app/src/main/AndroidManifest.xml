@@ -16,7 +16,7 @@
         <activity
             android:name=".BaseDatosActivity"
             android:exported="false" />
-        <!-- Cambiar MainActivity a Main_login como actividad principal -->
+
         <activity
             android:name=".Main_login"
             android:exported="true">
