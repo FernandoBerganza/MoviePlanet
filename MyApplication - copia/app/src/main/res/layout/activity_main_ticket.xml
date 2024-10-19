@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ticketTitle"
         android:layout_marginTop="16dp"
-        android:text="Asiento: D1, E2"
+        android:text="Asiento: E4, E5"
         android:textSize="18sp" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewDateInfo"
         android:layout_marginTop="8dp"
-        android:text="Hora: 18:00"
+        android:text="Hora: 05:30 pm"
         android:textSize="18sp" />
 
     <TextView
