@@ -97,13 +97,14 @@ public class Mainboleto extends AppCompatActivity {
         }
     }
 
-    // Método para mostrar el selector de fecha
+    // Método para mostrar el selector de fecha con restricciones
     private void showDatePicker() {
         final Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
+        // Crear un nuevo DatePickerDialog
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 Mainboleto.this,
                 (view, year1, month1, dayOfMonth) -> {
@@ -111,6 +112,19 @@ public class Mainboleto extends AppCompatActivity {
                     Toast.makeText(Mainboleto.this, "Fecha seleccionada: " + selectedDate, Toast.LENGTH_SHORT).show();
                 },
                 year, month, day);
+
+        // Establecer límites de fecha
+        Calendar minDate = Calendar.getInstance();
+        minDate.set(2024, Calendar.OCTOBER, 19);  // 19 de octubre de 2024
+
+        Calendar maxDate = Calendar.getInstance();
+        maxDate.set(2024, Calendar.NOVEMBER, 6);  // 6 de noviembre de 2024
+
+        // Aplicar los límites de fecha al DatePickerDialog
+        datePickerDialog.getDatePicker().setMinDate(minDate.getTimeInMillis());
+        datePickerDialog.getDatePicker().setMaxDate(maxDate.getTimeInMillis());
+
+        // Mostrar el DatePickerDialog
         datePickerDialog.show();
     }
 
@@ -137,6 +151,7 @@ public class Mainboleto extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
 
 
 
