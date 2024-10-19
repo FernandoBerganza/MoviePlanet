@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ticketLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:ignore="ExtraText"
+    android:background="#000000">
+
+    <!-- Título del boleto -->
+    <TextView
+        android:id="@+id/ticketTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Boleto de Cine"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
+    <!-- Información del asiento -->
+    <TextView
+        android:id="@+id/textViewSeatInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ticketTitle"
+        android:layout_marginTop="16dp"
+        android:text="Asiento: E4, E5"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textViewDateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSeatInfo"
+        android:layout_marginTop="8dp"
+        android:text="Fecha: 20/10/2024"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textViewTimeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDateInfo"
+        android:layout_marginTop="8dp"
+        android:text="Hora: 05:30 pm"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textViewQuantityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTimeInfo"
+        android:layout_marginTop="8dp"
+        android:text="Cantidad: 2"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textViewAmountInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewQuantityInfo"
+        android:layout_marginTop="8dp"
+        android:text="Monto: Q 50.00"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <!-- Código QR -->
+    <ImageView
+        android:id="@+id/imageViewQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAmountInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón para descargar el boleto -->
+    <Button
+        android:id="@+id/buttonDownloadTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewQRCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Descargar Boleto" />
+
+    <!-- Botón para regresar al catálogo -->
+    <Button
+        android:id="@+id/buttonBackToCatalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDownloadTicket"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Ir al Catálogo" />
+
+</RelativeLayout>
