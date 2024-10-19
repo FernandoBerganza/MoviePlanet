@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#000000">
+    <!-- TextView para fecha (invisible) -->
+    <TextView
+        android:id="@+id/textview_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Invisible -->
+
+    <!-- TextView para hora (invisible) -->
+    <TextView
+        android:id="@+id/textview_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Invisible -->
+
+    <!-- TextView para precio total (invisible) -->
+    <TextView
+        android:id="@+id/textview_precio_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Invisible -->
+    <!-- Título del cine -->
+    <TextView
+        android:id="@+id/textview_cine_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MoviesPlanet"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp"
+        android:textColor="@android:color/white"/>
+
+    <!-- Título de la película -->
+    <TextView
+        android:id="@+id/textview_pelicula_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Seleccione el asiento deseado!"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Asientos (GridLayout) -->
+    <GridLayout
+        android:id="@+id/gridlayout_asientos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:rowCount="5"
+        android:columnCount="8"
+        android:layout_margin="16dp"
+        android:alignmentMode="alignMargins"
+        android:padding="10dp"/>
+
+    <!-- Botón Reservar Asientos -->
+    <Button
+        android:id="@+id/button_reservar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Reservar Asientos"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
