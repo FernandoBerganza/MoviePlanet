@@ -6,7 +6,26 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="#000000">
+    <!-- TextView para fecha (invisible) -->
+    <TextView
+        android:id="@+id/textview_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Invisible -->
 
+    <!-- TextView para hora (invisible) -->
+    <TextView
+        android:id="@+id/textview_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Invisible -->
+
+    <!-- TextView para precio total (invisible) -->
+    <TextView
+        android:id="@+id/textview_precio_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Invisible -->
     <!-- Título del cine -->
     <TextView
         android:id="@+id/textview_cine_nombre"

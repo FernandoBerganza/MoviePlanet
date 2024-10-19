@@ -1,12 +1,13 @@
-package com.example.myapplication; // Asegúrate de que el paquete coincida con el de tu proyecto
+package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;  // Asegúrate de importar esta clase
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainTicket extends AppCompatActivity {
@@ -37,25 +38,42 @@ public class MainTicket extends AppCompatActivity {
         buttonDownloadTicket = findViewById(R.id.buttonDownloadTicket);
         buttonBackToCatalog = findViewById(R.id.buttonBackToCatalog);
 
-        // Establece información del boleto (puedes recibir estos datos de otro Activity)
-        setTicketInfo("Asiento: A1", "Fecha: 20/10/2024", "Hora: 18:00", "Cantidad: 2", "Monto: $120");
+        // Obtener los datos del Intent
+        Intent intent = getIntent();
+        String seatInfo = intent.getStringExtra("SEAT_INFO");
+        String dateInfo = intent.getStringExtra("DATE_INFO");
+        String timeInfo = intent.getStringExtra("TIME_INFO");
+        String quantityInfo = intent.getStringExtra("QUANTITY_INFO");
+        String amountInfo = intent.getStringExtra("AMOUNT_INFO");
+
+        // Log para depuración
+        Log.d("MainTicket", "Seat Info: " + seatInfo);
+        Log.d("MainTicket", "Date Info: " + dateInfo);
+        Log.d("MainTicket", "Time Info: " + timeInfo);
+        Log.d("MainTicket", "Quantity Info: " + quantityInfo);
+        Log.d("MainTicket", "Amount Info: " + amountInfo);
+
+        // Comprobar si los datos son null y mostrar un mensaje si es necesario
+        if (seatInfo == null || seatInfo.isEmpty()) seatInfo = "No hay asientos seleccionados";
+        if (dateInfo == null || dateInfo.isEmpty()) dateInfo = "Fecha no disponible";
+        if (timeInfo == null || timeInfo.isEmpty()) timeInfo = "Hora no disponible";
+        if (quantityInfo == null || quantityInfo.isEmpty()) quantityInfo = "Cantidad no disponible";
+        if (amountInfo == null || amountInfo.isEmpty()) amountInfo = "Monto no disponible";
+
+        // Establecer la información del boleto
+        setTicketInfo("Asientos: " + seatInfo, "Fecha: " + dateInfo, "Hora: " + timeInfo, "Cantidad: " + quantityInfo, "Monto: " + amountInfo);
 
         // Configura el botón de descarga de boleto
-        buttonDownloadTicket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Aquí puedes implementar la lógica para descargar el boleto
-            }
+        buttonDownloadTicket.setOnClickListener(v -> {
+            // Aquí puedes implementar la lógica para descargar el boleto
+            Toast.makeText(MainTicket.this, "Descargando boleto...", Toast.LENGTH_SHORT).show(); // Asegúrate de que esta línea sea correcta
         });
 
         // Configura el botón de regreso al catálogo
-        buttonBackToCatalog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainTicket.this, MainActivity.class); // Cambia MainCatalog por el nombre de tu actividad de catálogo
-                startActivity(intent);
-                finish(); // Finaliza la actividad actual si no la necesitas en el back stack
-            }
+        buttonBackToCatalog.setOnClickListener(v -> {
+            Intent intentBack = new Intent(MainTicket.this, MainActivity.class);
+            startActivity(intentBack);
+            finish(); // Finaliza la actividad actual si no la necesitas en el back stack
         });
     }
 
@@ -68,4 +86,9 @@ public class MainTicket extends AppCompatActivity {
         textViewAmountInfo.setText(amount);
     }
 }
+
+
+
+
+
 

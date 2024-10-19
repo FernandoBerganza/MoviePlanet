@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -44,10 +46,33 @@ public class Mainpaw extends AppCompatActivity {
                 // Lógica para procesar el pago
                 Toast.makeText(Mainpaw.this, "Pago realizado con " + paymentMethod, Toast.LENGTH_SHORT).show();
 
-                // Redirigir a la actividad del ticket
-                Intent intent = new Intent(Mainpaw.this, MainTicket.class); // Asegúrate de que TicketActivity sea el nombre de la actividad del ticket
-                startActivity(intent);
+                // Obtener datos de la actividad anterior (Mainreserva)
+                Intent intent = getIntent();
+
+                // Obtener los datos de reserva
+                String seatInfo = intent.getStringExtra("SEAT_INFO");
+                String dateInfo = intent.getStringExtra("DATE_INFO");
+                String timeInfo = intent.getStringExtra("TIME_INFO");
+                String quantityInfo = intent.getStringExtra("QUANTITY_INFO"); // Se obtiene el valor correcto
+                String amountInfo = intent.getStringExtra("AMOUNT_INFO"); // Se obtiene el valor correcto
+
+                // Log de los datos para depuración
+                Log.d("Mainpaw", "Asientos: " + seatInfo);
+                Log.d("Mainpaw", "Fecha: " + dateInfo);
+                Log.d("Mainpaw", "Hora: " + timeInfo);
+                Log.d("Mainpaw", "Cantidad: " + quantityInfo);
+                Log.d("Mainpaw", "Monto: " + amountInfo);
+
+                // Crear un nuevo Intent para MainTicket
+                Intent ticketIntent = new Intent(Mainpaw.this, MainTicket.class);
+                ticketIntent.putExtra("SEAT_INFO", seatInfo);
+                ticketIntent.putExtra("DATE_INFO", dateInfo);
+                ticketIntent.putExtra("TIME_INFO", timeInfo);
+                ticketIntent.putExtra("QUANTITY_INFO", quantityInfo); // Usa la variable ya definida
+                ticketIntent.putExtra("AMOUNT_INFO", amountInfo); // Usa la variable ya definida
+                startActivity(ticketIntent);
             }
         });
     }
 }
+

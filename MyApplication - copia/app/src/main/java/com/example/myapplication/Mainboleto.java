@@ -146,11 +146,21 @@ public class Mainboleto extends AppCompatActivity {
             return;
         }
 
+        // Obtener el horario seleccionado
+        String selectedTime = spinnerTimeSelection.getSelectedItem().toString();
+
         // Redireccionar a la pantalla de reserva
         Intent intent = new Intent(Mainboleto.this, Mainreserva.class);
+        intent.putExtra("ticketQuantity", ticketQuantity); // Este debe ser el valor variable
+        intent.putExtra("selectedDate", selectedDate);
+        intent.putExtra("selectedTime", selectedTime);
+        intent.putExtra("totalPrice", tvTotalPrice.getText().toString()); // Esto también debe ser un valor variable
         startActivity(intent);
+
+
     }
 }
+
 
 
 
